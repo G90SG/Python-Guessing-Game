@@ -1,19 +1,24 @@
 
 import random
 
+yesList = ["Yes", "Y", "y", "Yeah", "yes"]
+noList = ["No", "N", "n", "Nah", "no"]
+
 number = random.randint(1,10)
+
+
 
 name = input (("Hey there, what's your name? "))
 
 print ("Nice to meet you " + name + " please pick a number between 1 and 10. ")
 
-def main(): 
+def main():
   guess = int(input("Ready, Set, Go....? "))
-
+ 
   if guess == number:
     print ("Good Job " + name + ", you must be a mind reader.")
   elif guess == 0:
-    ("Not between 1 and 10, is it?")
+    print ("Not between 1 and 10, is it?")
   elif guess == (number+1):
     print ("OOOOooooh, just a tad to high.")
   elif guess == (number-1):
@@ -52,15 +57,26 @@ def main():
     print ("You couldn't be further from the right answer if you tried.")
   else: 
     print ("We both know that's not what I'm looking for here.")
+      
 
-  yesList = ["Yes", "Y", "y", "Yeah", "yes"]
-  noList = ["No", "N", "n", "Nah", "no"]
 
-  restart = input ("Would you like to try again? ")
+  def restart():
+    for number in range (1,6):
+      i = 1 
+      while i < 6:
+        print("You have " + str(i)+ " tries remaining.")
+        main()
+      if (i == 6):
+        break
+      i = i + 1
+
+  restart = input ("Would you like to try again? ") 
   if restart in yesList:
     main()
   elif restart in noList:
-    print ("GoodBye. ")
+    print("GoodBye. ")
   else:
     print ("It's like that is it? Good Bye then, " +name + ".")
+    
 main()
+
