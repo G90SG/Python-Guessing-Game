@@ -12,9 +12,7 @@ name = input (("Hey there, what's your name? "))
 
 print ("Nice to meet you " + name + " please pick a number between 1 and 10. ")
 
-def main():
-  guess = int(input("Ready, Set, Go....? "))
- 
+def check_guess(guess):
   if guess == number:
     print ("Good Job " + name + ", you must be a mind reader.")
   elif guess == 0:
@@ -58,21 +56,19 @@ def main():
   else: 
     print ("We both know that's not what I'm looking for here.")
       
+def make_guesses():
+  i=0
+  while i < 6:
+    guess = int(input("Ready, Set, Go....? "))
+    check_guess(guess)
+    i = i + 1 
+    print("You have " + str(6-i)+ " tries remaining.")
 
-
-  def restart():
-    for number in range (1,6):
-      i = 1 
-      while i < 6:
-        print("You have " + str(i)+ " tries remaining.")
-        main()
-      if (i == 6):
-        break
-      i = i + 1
-
+def main():
+  make_guesses()
   restart = input ("Would you like to try again? ") 
   if restart in yesList:
-    main()
+    make_guesses()
   elif restart in noList:
     print("GoodBye. ")
   else:
