@@ -1,4 +1,6 @@
 # Python_GuessingGame
+Please check v3!
+
 Set a variable to be a random number between 1 and 10. 
 Ask the user to guess the number. 
 Print an output if they guessed correctly.

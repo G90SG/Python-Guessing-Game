@@ -7,9 +7,7 @@ noList = ["No", "N", "n", "Nah", "no"]
 number = random.randint(1,10)
 
 
-
 name = input (("Hey there, what's your name? "))
-
 print ("Nice to meet you " + name + " please pick a number between 1 and 10. ")
 
 def check_guess(guess):
@@ -59,7 +57,11 @@ def check_guess(guess):
 def make_guesses():
   i=0
   while i < 6:
-    guess = int(input("Ready, Set, Go....? "))
+    guess = input("Ready, Set, Go....? ")
+    try: 
+      guess = int(guess)
+    except ValueError:
+      print("Please try again...")
     check_guess(guess)
     i = i + 1 
     print("You have " + str(6-i)+ " tries remaining.")
