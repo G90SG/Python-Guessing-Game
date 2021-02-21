@@ -1,4 +1,4 @@
-# Python_GuessingGame
+# Python Guessing Game
 Please check Main.py for 1-10 with more detailed IF statement 
 Please check Main.1py for 1-100 
 
