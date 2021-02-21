@@ -1,5 +1,7 @@
 # Python_GuessingGame
-Please check v3!
+Please check Main.py for 1-10 with more detailed IF statement 
+Please check Main.1py for 1-100 
+
 
 Set a variable to be a random number between 1 and 10. 
 Ask the user to guess the number. 
